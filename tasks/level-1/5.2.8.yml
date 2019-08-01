@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 5.2.8 Ensure SSH IgnoreRhosts is enabled 
+# 5.2.8 Ensure SSH IgnoreRhosts is enabled
 
 - name: 5.2.8 - Check if /etc/ssh/sshd_config exists
   stat:

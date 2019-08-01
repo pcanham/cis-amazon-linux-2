@@ -21,7 +21,7 @@
     - level-1
     - "2.1.1.3"
     - scored
-    
+
 - name: 2.1.1.3 - Ensure chrony is configure
   lineinfile:
     dest: "{{ cis_modprobe_conf_filename }}"

@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 3.5.2.1 Ensure IPv6 default deny firewall policy 
+# 3.5.2.1 Ensure IPv6 default deny firewall policy
 
 - name: 3.5.2.1 - Ensure default deny firewall policy(DROP INPUT)
   iptables:

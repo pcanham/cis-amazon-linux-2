@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
 
-# 3.2.6 Ensure bogus ICMP responses are ignored 
+# 3.2.6 Ensure bogus ICMP responses are ignored
 
-- name: 3.2.6 - Ensure bogus ICMP responses are ignored  
+- name: 3.2.6 - Ensure bogus ICMP responses are ignored
   sysctl:
     name: net.ipv4.icmp_ignore_bogus_error_responses
     value: 1

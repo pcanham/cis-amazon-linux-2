@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 5.2.7 Ensure SSH MaxAuthTries is set to 4 or less 
+# 5.2.7 Ensure SSH MaxAuthTries is set to 4 or less
 
 - name: 5.2.7 - Check if /etc/ssh/sshd_config exists
   stat:

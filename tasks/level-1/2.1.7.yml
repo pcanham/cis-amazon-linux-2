@@ -24,7 +24,7 @@
     - level-1
     - "2.1.7"
     - scored
-  
+
 - name: 2.1.7 -  Ensure rpcbind is not enabled
   systemd:
     name: "rpcbind"
