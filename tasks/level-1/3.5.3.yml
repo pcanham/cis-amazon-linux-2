@@ -5,6 +5,7 @@
 
 - name: 3.5.3 - Ensure iptables is installed
   yum:
+    lock_timeout: 180
     name: "iptables"
     state: latest
   tags:

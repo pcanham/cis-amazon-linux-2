@@ -5,11 +5,13 @@
 
 - name: Install the SE Linux requirements - libselinux-python
   yum:
+    lock_timeout: 180
     name: libselinux-python
     state: installed
 
 - name: Install the SE Linux requirements - policycoreutils-python
   yum:
+    lock_timeout: 180
     name: policycoreutils-python
     state: installed
 

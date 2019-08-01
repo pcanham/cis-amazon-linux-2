@@ -5,6 +5,7 @@
 
 - name: 2.2.1 - Ensure NIS Client is not installed
   yum:
+    lock_timeout: 180
     name: ypbind
     state: absent
   tags:

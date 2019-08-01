@@ -5,6 +5,7 @@
 
 - name: 1.6.1.4 Ensure SETroubleshoot is not installed (Scored)
   yum:
+    lock_timeout: 180
     name: setroubleshoot
     state: removed
   tags:
