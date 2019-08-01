@@ -10,5 +10,5 @@ galaxy_info:
   - name: Amazon
     versions:
     - "2016.03"
-  galaxy_tags: ['CIS','Linux','Amazon','hardening','benchmark','PCIDSS','compliance']
+  galaxy_tags: ['CIS','Linux','Amazon','hardening','benchmark','compliance']
 dependencies: []
