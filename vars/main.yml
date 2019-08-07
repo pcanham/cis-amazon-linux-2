@@ -26,3 +26,5 @@ cis_6_1_13_suid_executables_exclusion:
   - "/usr/bin/passwd"
   - "/usr/bin/chage"
   - "/usr/bin/gpasswd"
+cis_6_1_14_sgid_executables_exclusion:
+  - ""
