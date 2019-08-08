@@ -20,7 +20,7 @@
     dest: "/etc/ssh/sshd_config"
   when:
     - sshd_config_5_2_18.stat.exists
-    - cis_sshd_allow_users is defined and cis_sshd_allow_users|trim != ""
+    - cis_sshd_allow_users is defined and cis_sshd_allow_users|trim|length > 0
   notify: Restart sshd
   tags:
     - level-1
@@ -35,7 +35,7 @@
     dest: "/etc/ssh/sshd_config"
   when:
     - sshd_config_5_2_18.stat.exists
-    - cis_sshd_allow_groups is defined and cis_sshd_allow_groups|trim != ""
+    - cis_sshd_allow_groups is defined and cis_sshd_allow_groups|trim|length > 0
   notify: Restart sshd
   tags:
     - level-1
@@ -50,7 +50,7 @@
     dest: "/etc/ssh/sshd_config"
   when:
     - sshd_config_5_2_18.stat.exists
-    - cis_sshd_deny_users is defined and cis_sshd_deny_users|trim != ""
+    - cis_sshd_deny_users is defined and cis_sshd_deny_users|trim|length > 0
   notify: Restart sshd
   tags:
     - level-1
@@ -65,7 +65,7 @@
     dest: "/etc/ssh/sshd_config"
   when:
     - sshd_config_5_2_18.stat.exists
-    - cis_sshd_deny_groups is defined and cis_sshd_deny_groups|trim != ""
+    - cis_sshd_deny_groups is defined and cis_sshd_deny_groups|trim|length > 0
   notify: Restart sshd
   tags:
     - level-1
