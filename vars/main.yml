@@ -20,11 +20,3 @@ cis_audit_rules_filename: "/etc/audit/audit.rules"
 cis_audit_auditd_filename: "/etc/audit/auditd.conf"
 cis_grub_default_filename: "/etc/default/grub"
 full_upgrade: True
-cis_6_1_13_suid_executables_exclusion:
-  - "/usr/bin/sudo"
-  - "/usr/bin/su"
-  - "/usr/bin/passwd"
-  - "/usr/bin/chage"
-  - "/usr/bin/gpasswd"
-cis_6_1_14_sgid_executables_exclusion:
-  - ""
