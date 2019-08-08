@@ -4,7 +4,9 @@
 # 6.2.5 Ensure root is the only UID 0 account
 
 - name: 6.2.5 - Ensure root is the only UID 0 account
-  shell: "cat /etc/passwd | awk -F: '($3 == 0) { print $1 }'"
+  shell: |
+    set -o pipefail
+    cat /etc/passwd | awk -F: '($3 == 0) { print $1 }'
   check_mode: no
   changed_when: False
   register: cat_6_2_5
