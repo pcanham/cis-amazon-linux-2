@@ -21,7 +21,7 @@
     - "2.1.15"
     - scored
 
-- name: 2.1.15 - Ensure chrony is configure
+- name: 2.1.15 - Ensure mail transfer agent is configured for local-only mode
   lineinfile:
     dest: "{{ cis_postfix_configure_filename }}"
     regexp: "^inet_interfaces\\s+"
@@ -32,9 +32,9 @@
     - "2.1.15"
     - scored
 
-- name: 2.1.15 Ensure mail transfer agent is configured for local-only mode
+- name: 2.1.15 Ensure mail transfer agent is running
   systemd:
-    name: "snmpd"
+    name: "postfix"
     enabled: yes
     state: restarted
   ignore_errors: True
