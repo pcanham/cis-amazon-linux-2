@@ -13,3 +13,5 @@
     - level-1
     - "2.1.3"
     - scored
+  when:
+    - ansible_facts.services['avahi-daemon'] is defined

@@ -13,3 +13,5 @@
     - level-1
     - "2.1.12"
     - scored
+  when:
+    - ansible_facts.services['smb'] is defined

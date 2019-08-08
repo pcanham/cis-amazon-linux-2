@@ -13,3 +13,5 @@
     - level-1
     - "2.1.20"
     - scored
+  when:
+    - ansible_facts.services['rsyncd'] is defined

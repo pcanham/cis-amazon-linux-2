@@ -13,6 +13,8 @@
     - level-1
     - "2.1.7"
     - scored
+  when:
+    - ansible_facts.services['slapd'] is defined
 
 - name: 2.1.7 -  Ensure nfs-server is not enabled
   systemd:
@@ -24,6 +26,8 @@
     - level-1
     - "2.1.7"
     - scored
+  when:
+    - ansible_facts.services['nfs-server'] is defined
 
 - name: 2.1.7 -  Ensure rpcbind is not enabled
   systemd:
@@ -35,3 +39,5 @@
     - level-1
     - "2.1.7"
     - scored
+  when:
+    - ansible_facts.services['rpcbind'] is defined

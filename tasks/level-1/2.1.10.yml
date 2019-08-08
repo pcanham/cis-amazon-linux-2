@@ -13,3 +13,5 @@
     - level-1
     - "2.1.10"
     - scored
+  when:
+    - ansible_facts.services['httpd'] is defined

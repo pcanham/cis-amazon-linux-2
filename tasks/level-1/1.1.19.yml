@@ -13,3 +13,5 @@
     - level-1
     - "1.1.19"
     - scored
+  when:
+    - ansible_facts.services['autofs'] is defined

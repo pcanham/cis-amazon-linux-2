@@ -13,3 +13,5 @@
     - level-1
     - "2.1.5"
     - scored
+  when:
+    - ansible_facts.services['dhcpd'] is defined

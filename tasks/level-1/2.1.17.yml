@@ -13,6 +13,8 @@
     - level-1
     - "2.1.17"
     - scored
+  when:
+    - ansible_facts.services['rsh.socket'] is defined
 
 - name: 2.1.17 - Ensure rlogin is not enabled
   systemd:
@@ -24,6 +26,8 @@
     - level-1
     - "2.1.17"
     - scored
+  when:
+    - ansible_facts.services['rlogin.socket'] is defined
 
 - name: 2.1.17 - Ensure rexec is not enabled
   systemd:
@@ -35,3 +39,5 @@
     - level-1
     - "2.1.17"
     - scored
+  when:
+    - ansible_facts.services['rexec.socket'] is defined

@@ -13,3 +13,5 @@
     - level-1
     - "2.1.21"
     - scored
+  when:
+    - ansible_facts.services['ntalk'] is defined
