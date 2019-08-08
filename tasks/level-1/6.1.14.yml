@@ -14,9 +14,9 @@
 
 - name: 6.1.14 - Audit SGID executables
   fail:
-    msg: "{{ audit_6_1_14.stdout }}"
+    msg: "{{ (audit_6_1_14.stdout_lines | difference(cis_6_1_14_sgid_executables_exclusion)) }}"
   when:
-    - audit_6_1_14.stdout_lines is defined and audit_6_1_14.stdout_lines|length > 0
+    - audit_6_1_14.stdout_lines is defined and (audit_6_1_14.stdout_lines | difference(cis_6_1_14_sgid_executables_exclusion))|length > 0
     - fail_on_manual_remediation_actions
   tags:
     - level-1
@@ -26,9 +26,9 @@
 
 - name: 6.1.14 - Audit SGID executables
   debug:
-    msg: "*** ACTION REQUIRED *** {{ audit_6_1_14.stdout }}"
+    msg: "*** ACTION REQUIRED *** {{ (audit_6_1_14.stdout_lines | difference(cis_6_1_14_sgid_executables_exclusion)) }}"
   when:
-    - audit_6_1_14.stdout_lines is defined and audit_6_1_14.stdout_lines|length > 0
+    - audit_6_1_14.stdout_lines is defined and (audit_6_1_14.stdout_lines | difference(cis_6_1_14_sgid_executables_exclusion))|length > 0
     - not fail_on_manual_remediation_actions
   tags:
     - level-1

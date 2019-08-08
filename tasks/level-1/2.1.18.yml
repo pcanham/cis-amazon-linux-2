@@ -13,3 +13,5 @@
     - level-1
     - "2.1.18"
     - scored
+  when:
+    - ansible_facts.services['telnet.socket'] is defined

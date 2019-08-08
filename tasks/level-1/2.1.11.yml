@@ -13,3 +13,5 @@
     - level-1
     - "2.1.11"
     - scored
+  when:
+    - ansible_facts.services['dovecot'] is defined

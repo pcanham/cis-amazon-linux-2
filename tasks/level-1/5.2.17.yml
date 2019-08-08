@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 5.2.17 Ensure SSH LoginGraceTime is set to one minute or less   
+# 5.2.17 Ensure SSH LoginGraceTime is set to one minute or less
 
 - name: 5.2.17 - Check if /etc/ssh/sshd_config exists
   stat:

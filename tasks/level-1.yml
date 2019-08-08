@@ -1,6 +1,7 @@
 # Standards: 0.11
 ---
-
+- name: populate service facts
+  service_facts:
 - import_tasks: "level-1/1.1.1.1.yml"
   when: "'1.1.1.1' not in cis_level_1_exclusions"
 - import_tasks: "level-1/1.1.1.2.yml"

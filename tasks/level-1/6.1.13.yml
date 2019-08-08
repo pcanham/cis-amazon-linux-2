@@ -14,9 +14,9 @@
 
 - name: 6.1.13 - Audit SUID executables
   fail:
-    msg: "{{ audit_6_1_13.stdout_lines }}"
+    msg: "{{ (audit_6_1_13.stdout_lines | difference(cis_6_1_13_suid_executables_exclusion)) }}"
   when:
-    - audit_6_1_13.stdout_lines is defined and audit_6_1_13.stdout_lines|length > 0
+    - audit_6_1_13.stdout_lines is defined and (audit_6_1_13.stdout_lines | difference(cis_6_1_13_suid_executables_exclusion))|length > 0
     - fail_on_manual_remediation_actions
   tags:
     - level-1
@@ -26,9 +26,9 @@
 
 - name: 6.1.13 - Audit SUID executables
   debug:
-    msg: "*** ACTION REQUIRED *** {{ audit_6_1_13.stdout }}"
+    msg: "*** ACTION REQUIRED *** {{ (audit_6_1_13.stdout_lines | difference(cis_6_1_13_suid_executables_exclusion)) }}"
   when:
-    - audit_6_1_13.stdout_lines is defined and audit_6_1_13.stdout_lines|length > 0
+    - audit_6_1_13.stdout_lines is defined and (audit_6_1_13.stdout_lines | difference(cis_6_1_13_suid_executables_exclusion))|length > 0
     - not fail_on_manual_remediation_actions
   tags:
     - level-1

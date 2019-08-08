@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 5.2.19 Ensure SSH warning banner isconfigured   
+# 5.2.19 Ensure SSH warning banner isconfigured
 
 - name: 5.2.19 - Check if /etc/ssh/sshd_config exists
   stat:

@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 3.5.2.2 Ensure IPv6 loopback traffic is configured 
+# 3.5.2.2 Ensure IPv6 loopback traffic is configured
 
 - name: 3.5.2.2- Ensure IPv6 loopback traffic is configured (-i lo)
   iptables:

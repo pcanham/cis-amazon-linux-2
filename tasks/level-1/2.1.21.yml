@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
 
-# 2.1.21 Ensure talk server is not enabled 
+# 2.1.21 Ensure talk server is not enabled
 
-- name: 2.1.21 - Ensure talk server is not enabled 
+- name: 2.1.21 - Ensure talk server is not enabled
   systemd:
     name: "ntalk"
     enabled: no
@@ -13,3 +13,5 @@
     - level-1
     - "2.1.21"
     - scored
+  when:
+    - ansible_facts.services['ntalk'] is defined

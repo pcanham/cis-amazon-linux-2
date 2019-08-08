@@ -2,7 +2,7 @@ ANSIBLE_TEST_PLAYBOOK_FILE = playbook.yml
 ANSIBLE_CONTAINER_PLAYBOOK_FILE = container.yml
 
 symlink-role:
-	@mkdir -p tests/roles 
+	@mkdir -p tests/roles
 	@rsync -a . tests/roles/cis-amazon-linux-2 --exclude 'tests/' --exclude '.git'
 
 test: symlink-role syntax test-ansible-2.4

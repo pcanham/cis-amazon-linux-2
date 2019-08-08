@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
 
-# 3.2.5 Ensure broadcast ICMP requests are ignored 
+# 3.2.5 Ensure broadcast ICMP requests are ignored
 
-- name: 3.2.5 - Ensure broadcast ICMP requests are ignored  
+- name: 3.2.5 - Ensure broadcast ICMP requests are ignored
   sysctl:
     name: net.ipv4.icmp_echo_ignore_broadcasts
     value: 1

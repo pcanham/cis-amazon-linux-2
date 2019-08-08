@@ -1,14 +1,14 @@
 # Standards: 0.11
 
 galaxy_info:
-  author: Huy Ta
+  author: Paul Canham
   description: Implement CIS Amazon Linux 2 Benchmark
-  company: Origin
+  company:
   license: MIT
-  min_ansible_version: 2.4
+  min_ansible_version: 2.8
   platforms:
   - name: Amazon
     versions:
     - "2016.03"
-  galaxy_tags: ['CIS','Linux','Amazon','hardening','benchmark','PCIDSS','compliance']
+  galaxy_tags: ['CIS','Linux','Amazon','hardening','benchmark','compliance']
 dependencies: []

@@ -5,6 +5,7 @@
 
 - name: 1.6.1.5 Ensure the MCS Translation Service (mcstrans) is not installed
   yum:
+    lock_timeout: 180
     name: mcstrans
     state: removed
   tags:

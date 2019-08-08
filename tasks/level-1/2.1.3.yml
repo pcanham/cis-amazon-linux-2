@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 2.1.3 Ensure Avahi Server is not enabled 
+# 2.1.3 Ensure Avahi Server is not enabled
 
 - name: 2.1.3 - Ensure Avahi Server is not enabled
   systemd:
@@ -13,3 +13,5 @@
     - level-1
     - "2.1.3"
     - scored
+  when:
+    - ansible_facts.services['avahi-daemon'] is defined

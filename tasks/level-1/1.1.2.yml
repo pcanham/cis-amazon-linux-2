@@ -7,9 +7,9 @@
   mount:
     name: "{{ item.mountpoint }}"
     state: present
-    fstype: "{{item.fstype}}"
-    src: "{{item.device}}"
-    opts: "{{item.opts}}"
+    fstype: "{{ item.fstype }}"
+    src: "{{ item.device }}"
+    opts: "{{ item.opts }}"
   with_items:
     - { mountpoint: '/tmp', device: 'tmpfs', fstype: 'tmpfs', opts: 'rw,nosuid,nodev,noexec,relatime' }
   tags:

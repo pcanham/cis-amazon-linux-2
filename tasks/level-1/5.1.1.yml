@@ -5,6 +5,7 @@
 
 - name: 5.1.1 - Ensure cron is installed
   yum:
+    lock_timeout: 180
     name: cronie
     state: present
   tags:

@@ -13,3 +13,5 @@
     - level-1
     - "2.1.6"
     - scored
+  when:
+    - ansible_facts.services['slapd'] is defined

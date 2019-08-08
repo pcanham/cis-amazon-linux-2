@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
 
-# 3.2.3 Ensure secure ICMP redirects are not accepted 
+# 3.2.3 Ensure secure ICMP redirects are not accepted
 
-- name: 3.2.3 - Ensure secure ICMP redirects are not accepted 
+- name: 3.2.3 - Ensure secure ICMP redirects are not accepted
   sysctl:
     name: net.ipv4.conf.all.secure_redirects
     value: 0

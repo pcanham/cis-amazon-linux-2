@@ -1,7 +1,7 @@
 # Standards: 0.11
 ---
 
-# 3.3.3 Ensure /etc/hosts.deny is configured 
+# 3.3.3 Ensure /etc/hosts.deny is configured
 
 - name: 3.3.3 - Check if /etc/hosts.deny configuration file exists
   stat:
